@@ -1,0 +1,35 @@
+<div class="account-sidebar" (click)='toggleProfile()'><a class="popup-btn">my account</a></div>
+<div class="dashboard-left"[ngStyle]="{'left':openProfile ? '0':(backProfile ? '-365px':'')}">
+  <div class="collection-mobile-back">
+    <span class="filter-back"
+     (click)='toggleMobileBackProfile()' ><i class="fa fa-angle-left" aria-hidden="true"></i> back</span
+    >
+  </div>
+  <div class="block-content">
+    
+    <ul class="nav" role="tablist">
+      <li>
+        <a
+          routerLink="/profile/dashboard"
+          >Hesabım</a
+        >
+      </li>
+      <li>
+        <a
+           routerLink="/profile/my-orders"
+
+          >Siparişlerim</a
+        >
+      </li>
+
+      <li>
+        <a
+        routerLink="/profile/edit"
+
+          >Edit</a
+        >
+      </li>
+      <li><a href="">Çıkış</a></li>
+    </ul>
+  </div>
+</div>

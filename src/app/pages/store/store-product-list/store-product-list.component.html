@@ -1,0 +1,107 @@
+       
+                      
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="card dashboard-table mt-0">
+                                        
+                                        <div class="card-body">
+                                           
+                                            <div  class="top-sec"><h3 >all products</h3><a  (click)="showDialogToAdd()" class="btn btn-sm btn-solid">add product</a></div>
+                                           
+                                            <div class="admin-table store-table">
+                                                <div class="ui-table">
+                                            <p-table
+                                              [columns]="cols"
+                                              class="jsgrid-table"
+                                              [value]="cars"
+                                              [responsive]="true"
+                                              [(selection)]="selectedCar"
+                                              (onRowSelect)="onRowSelect($event)"
+                                              [paginator]="true" [rows]="4"
+                                              
+                                            >   
+                                              <ng-template pTemplate="header" let-columns>
+                                                <tr class="table-head">
+                                                  <th *ngFor="let col of columns">
+                                                    {{ col.header }}
+                                                  </th>
+                                                </tr>
+                                              </ng-template>
+                                              <ng-template pTemplate="body" let-rowData let-columns="columns">
+                                                <tr [pSelectableRow]="rowData">
+                                                  <td *ngFor="let col of columns" >
+                                                    <span class="ui-column-title"
+                                                      >&#123;&#123;col.header&#125;&#125;</span
+                                                    >
+                                                    <!--              <ng-container *ngIf='col.header==="Year"'>   <h2>{{rowData[col.field]}}</h2> </ng-container> -->
+                                                    <ng-container *ngIf="col.field === 'img'">
+                                                      <img [src]="rowData[col.field]" />
+                                                    </ng-container>
+                                                    <ng-container *ngIf="col.field === 'price'">
+                                                        <p>  &#123;&#123;rowData[col.field] &#125;&#125; </p>
+                                                    </ng-container>
+                                                    <ng-container *ngIf="col.field === 'product_name'">
+                                                    <p>  &#123;&#123;rowData[col.field] &#125;&#125; </p>
+                                                    </ng-container>
+                                                    <ng-container *ngIf="col.field === 'quantity'">
+                                                        <p>  &#123;&#123;rowData[col.field] &#125;&#125; </p>
+                                
+                                                    </ng-container>
+                                                    <ng-container *ngIf="col.field === 'action'">
+                                                        <i  aria-hidden="true" class="fa fa-pencil-square-o mr-1"></i>
+                                                        <i  aria-hidden="true" class="fa fa-trash-o ml-1"></i>                  </ng-container>
+                                                    <ng-container *ngIf="col.field === 'total'">
+                                                      <h2 class="td-color">$ {{ rowData[col.field] }}</h2>
+                                                    </ng-container>
+                                                  </td>
+                                                
+                                                </tr>
+                                              </ng-template>
+                                            </p-table>
+                                             
+                                        </div>
+                                        </div>
+                                          </div>
+                                    </div>
+                                   
+                                </div>
+                            </div>
+                  
+                       
+                      
+                      
+                            <p-dialog header="Car Details" [(visible)]="displayDialog" [focusOnShow]="false" [responsive]="true" showEffect="fade" [modal]="true" >
+                                <div class="p-grid ui-fluid" *ngIf="car">
+                                    <div class="p-col-4">
+                                        <label for="vin">Vin</label>
+                                    </div>
+                                    <div class="p-col-8">
+                                        <input pInputText id="vin" [(ngModel)]="car.action" autofocus />
+                                    </div>
+                                    <div class="p-col-4">
+                                        <label for="year">Year</label>
+                                    </div>
+                                    <div class="p-col-8">
+                                        <input pInputText id="year" [(ngModel)]="car.img" />
+                                    </div>
+                                    <div class="p-col-4">
+                                        <label for="brand">Brand</label>
+                                    </div>
+                                    <div class="p-col-8">
+                                        <input pInputText id="brand" [(ngModel)]="car.price" />
+                                    </div>
+                                    <div class="p-col-4">
+                                        <label for="color">Color</label>
+                                    </div>
+                                    <div class="p-col-8">
+                                        <input pInputText id="color" [(ngModel)]="car.product_name" />
+                                    </div>
+                                </div>
+                                <p-footer>
+                                    <div class="ui-dialog-buttonpane ui-helper-clearfix">
+                                        <button type="button" pButton icon="pi pi-times" (click)="delete()" label="Delete" class="btn btn-primary"></button>
+                                        <button type="button" pButton icon="pi pi-check" (click)="save()" label="Save" class="btn btn-secondary"></button>
+                                    </div>
+                                </p-footer>
+                            </p-dialog>
+                            

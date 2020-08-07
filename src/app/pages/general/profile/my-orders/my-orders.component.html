@@ -1,0 +1,55 @@
+
+ 
+<div class="dashboard-right tab-content" >
+  <div
+    class="dashboard tab-pane fade active show"
+  
+  >
+  
+<div class="multi"><p-table
+  [columns]="cols"
+  class="table cart-table table-responsive-xs"
+  [value]="cars"
+   [responsive]="true"
+  [(selection)]="selectedCar"
+  (onRowSelect)="onRowSelect($event)"
+  [rows]="10"
+>
+  <ng-template pTemplate="header" let-columns>
+    <tr class="table-head">
+      <th *ngFor="let col of columns">
+        {{ col.header }}
+      </th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-rowData let-columns="columns">
+    <tr [pSelectableRow]="rowData">
+      <td *ngFor="let col of columns">
+        <span class="ui-column-title">&#123;&#123;col.header&#125;&#125;</span>
+        <!--              <ng-container *ngIf='col.header==="Year"'>   <h2>{{rowData[col.field]}}</h2> </ng-container> -->
+        <ng-container *ngIf="col.field === 'img'">
+          <img [src]="rowData[col.field]" />
+        </ng-container>
+        <ng-container *ngIf="col.field === 'price'">
+            <a href="">&#123;&#123;rowData[col.field] &#125;&#125;</a>
+        </ng-container>
+        <ng-container *ngIf="col.field === 'product_name'">
+          <a href="">&#123;&#123;rowData[col.field] &#125;&#125;</a>
+        </ng-container>
+        <ng-container *ngIf="col.field === 'quantity'">
+            <a href="">&#123;&#123;rowData[col.field] &#125;&#125;</a>
+
+        </ng-container>
+        <ng-container *ngIf="col.field === 'action'">
+          <a href="#" class="icon"><i class="ti-close"></i></a>
+        </ng-container>
+        <ng-container *ngIf="col.field === 'total'">
+          <h2 class="td-color">$ {{ rowData[col.field] }}</h2>
+        </ng-container>
+      </td>
+    </tr>
+  </ng-template>
+</p-table></div>
+  </div>
+</div>
+ 

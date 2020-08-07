@@ -1,0 +1,48 @@
+.main-menu .menu-right .icon-nav .onhover-div .show-div.shopping-cart li .media .media-body h4 {
+    
+    line-height: 1.5;
+}
+.header-dropdown .onhover-dropdown:before {
+  
+    right: -12px;
+}
+.main-menu .brand-logo {
+    padding-top: inherit;
+    padding-bottom: inherit;
+}
+.store-name{
+   color:#ff4c3b;
+}
+.product-box .product-detail h6{
+    font-size: 20px;
+    line-height: 1.5;
+    padding-top: 0;
+}
+.product-box .product-detail h5{
+ 
+    line-height: 1;
+  
+}
+@media only screen and (min-width: 768px) {
+
+    .product-page-filter:after {
+        position: absolute;
+        display: block;
+        top: 20px;
+        right: 10px;
+        content: "\f0d7";
+        font-family: FontAwesome;
+        color: #444444;
+    }
+}
+.collection-product-wrapper .product-top-filter .product-filter-content .product-page-filter{
+    border-right: 1px solid #ccc;
+}
+
+@media only screen and (max-width: 768px) {
+    .product-box .product-detail h6 {
+        font-size: 14px;
+        line-height: 1.4;
+     
+    }
+  }

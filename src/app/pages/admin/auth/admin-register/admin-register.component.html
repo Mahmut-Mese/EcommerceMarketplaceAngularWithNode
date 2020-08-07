@@ -1,0 +1,101 @@
+<div class="authentication-box">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5 p-0 card-left">
+                <div class="card bg-primary"  >
+                    <div class="svg-icon">
+    <img src="../../../../../assets/images/favicon/1.png" alt="" class="src">
+                    </div>
+
+                    <div class="single-item">
+                        <div>
+                            <div>
+                                <h3>Welcome to laleli</h3>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.</p>
+                            </div>
+                        </div>
+                    
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-7 p-0 card-right">
+                <div class="card tab2-card">
+                    <div class="card-body">
+                        <ul class="nav nav-tabs nav-material" id="top-tab" role="tablist" *ngIf="!forget" >
+                            <li class="nav-item">
+                                <a class="nav-link " id="top-profile-tab" data-toggle="tab" href="#top-profile" role="tab"
+                                 aria-controls="top-profile" aria-selected="true" ><span class="icon-user mr-2"></span>Login</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" id="contact-top-tab" data-toggle="tab"
+                                 href="#top-contact" role="tab" aria-controls="top-contact"
+                                  aria-selected="false"  ><span class="icon-unlock mr-2"></span>Register</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="top-tabContent">
+                            <div class="tab-pane fade" id="top-profile" role="tabpanel" aria-labelledby="top-profile-tab" *ngIf="!forget">
+                                <form class="form-horizontal auth-form">
+                                    <div class="form-group">
+                                        <input required="" name="login[username]" type="email" class="form-control" placeholder="Username" id="exampleInputEmail1">
+                                    </div>
+                                    <div class="form-group">
+                                        <input required="" name="login[password]" type="password" class="form-control" placeholder="Password">
+                                    </div>
+                                    <div class="form-terms">
+                                        <div class="custom-control custom-checkbox mr-sm-2">
+                                            <input type="checkbox" class="custom-control-input" id="customControlAutosizing">
+                                            <label class="custom-control-label" for="customControlAutosizing">Remember me</label>
+                                            <a  class="btn btn-default forgot-pass" (click)="forgetPass()">lost your password</a>
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="form-button">
+                                        <button class="btn btn-primary" type="submit">Login</button>
+                                    </div>
+                                   
+                                </form>
+                            </div>
+                            <div class="tab-pane fade  show active" id="top-contact" role="tabpanel" aria-labelledby="contact-top-tab" *ngIf="!forget">
+                                <form class="form-horizontal auth-form">
+                                    <div class="form-group">
+                                        <input required="" name="login[username]" type="email" class="form-control" placeholder="Username" id="exampleInputEmail12">
+                                    </div>
+                                    <div class="form-group">
+                                        <input required="" name="login[password]" type="password" class="form-control" placeholder="Password">
+                                    </div>
+                                    <div class="form-group">
+                                        <input required="" name="login[password]" type="password" class="form-control" placeholder="Confirm Password">
+                                    </div>
+                                    <div class="form-terms">
+                                        <div class="custom-control custom-checkbox mr-sm-2">
+                                            <input type="checkbox" class="custom-control-input" id="customControlAutosizing1">
+                                            <label class="custom-control-label" for="customControlAutosizing1"><span>I agree all statements in <a routerLink="/aggrement" class="pull-right">Terms &amp; Conditions</a></span></label>
+                                        </div>
+                                    </div>
+                                    <div class="form-button">
+                                        <button class="btn btn-primary" type="submit">Register</button>
+                                    </div>
+                               
+                                </form>
+                            </div>
+                            <div class="tab-pane fade show active" id="password-forget" role="tabpanel" aria-labelledby="forget-password" *ngIf="forget">
+                                <form class="form-horizontal auth-form">
+                                    <div class="form-group">
+                                        <br>
+                                        <input required="" name="login[forget]" type="email" class="form-control" placeholder="email" id="exampleInputEmail12">
+                                    </div>
+                                 
+                                  
+                                    <div class="form-button">
+                                        <button class="btn btn-primary" type="submit">gönder</button>
+                                    </div>
+                               
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

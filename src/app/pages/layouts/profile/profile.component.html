@@ -1,0 +1,42 @@
+<app-header></app-header>
+<!-- breadcrumb start -->
+<div class="breadcrumb-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="page-title">
+          <h2>Dashboard</h2>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <nav aria-label="breadcrumb" class="theme-breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">
+              Dashboard
+            </li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- breadcrumb End -->
+
+<!-- section start -->
+
+<section class="section-b-space">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3">
+      <app-profile-sidebar></app-profile-sidebar>
+      </div>
+      <div class="col-lg-9">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- section end -->
+ 
+<app-footer></app-footer>

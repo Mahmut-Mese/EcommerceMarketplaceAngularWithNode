@@ -1,0 +1,130 @@
+.add-photo{
+    float: left;
+    ul{
+        padding-left: 0px;
+        list-style-type: none;
+        margin-bottom: 0;
+        padding-right: 0px;
+        li{
+            display: flex;
+            margin-bottom: 15px;
+            .box-input-file{
+                width: 60px;
+                height: 60px;
+                margin: 5px;
+                background-color: #f1f4fb;
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                vertical-align: middle;
+                .upload{
+                    position: absolute;
+                    width: 70px;
+                    left: 0;
+                    right: 0;
+                    opacity: 0;
+                }
+                i{
+                    color: #ff8084;
+                }
+            }
+        }
+    }
+}
+/* .add-photo ul li .box-input-file .upload {
+  position: absolute;
+  width: 70px;
+  left: 0;
+  right: 0;
+  opacity: 0;
+} */
+/* .add-photo ul li .box-input-file i {
+  color: #ff8084;
+} */
+.fa-plus:before {
+  content: "";
+}
+ 
+.photos img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  margin: 5px;
+  float: left;
+}
+  .card {
+  margin-top: 0 !important
+}
+
+.btn {
+  line-height: 20px;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 0;
+  margin-right: 5px;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+.btn:hover {
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+.btn:focus {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.btn-primary {
+  background-color: #ff8084 !important;
+  border-color: #ff8084 !important;
+}
+.btn-primary.disabled {
+  background-color: #ff8084 !important;
+  border-color: #ff8084 !important;
+}
+.btn-primary:disabled {
+  background-color: #ff8084 !important;
+  border-color: #ff8084 !important;
+}
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active {
+  background-color: #ff4d53 !important;
+  border-color: #ff4d53 !important;
+}
+.btn-primary:focus {
+  -webkit-box-shadow: 0 0 0 0.2rem white;
+  box-shadow: 0 0 0 0.2rem white;
+}
+.sizes label{margin: 5px;}
+.sizes input{
+    margin-right: 15px;
+}
+textarea {
+    width: 100%;
+
+}
+.add-more-cat {
+    color:#1e6bb8;
+    position: relative;
+    top: -12px;
+}
+.center-slide{
+  text-align: center;
+}
+@media only screen and (max-width: 768px){
+  .add-product-form label{
+    color: #666;
+      font-size: 12px;
+      margin-bottom: 4px !important
+  }
+  .add-more-cat  {
+    color: #1e6bb8;
+    position: relative;
+    top: -12px;
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,191 @@
+.slider-container{    position: absolute;
+    top: 35%;
+    left: 16%;}
+.bg-img{width: 100%;
+    max-height: 100%;}
+.home-slider .slider-container h4  {
+    font-weight: 700;
+    letter-spacing: 0.4em;
+    color: #777777;
+    margin-bottom: 0;
+}
+ 
+%swiper-button{
+    opacity: 0.9;
+    border-radius: 25px;
+    position: absolute;
+    top: 50%;
+    width: 40px;
+    height: 40px;
+    margin-top: -22px;
+    z-index: 10;
+    cursor: pointer;
+    -moz-background-size: 27px 44px;
+    -webkit-background-size: 27px 44px;
+    background-size: 44px 44px;
+    background-repeat: no-repeat;
+}
+::ng-deep .swiper-container .swiper-button-next  {
+    @extend %swiper-button;
+    &:after{
+        content:none !important;
+    }
+    top: 58% !important;
+    background: url(../../../../assets/images/swiper-btn/swiper-right.png);
+    right: 10px;
+    left: auto;
+}
+::ng-deep .swiper-container .swiper-button-prev  {
+    @extend %swiper-button;
+    &:after{
+        content:none !important;  
+    }
+    top: 58% !important;
+    background: url(../../../../assets/images/swiper-btn/swiper-left.png);
+    left: 10px;
+    right: auto;
+}
+.product-box img{
+    height: 400px;
+    object-fit: cover;
+}
+.second-cat  
+    h2 {
+        text-align: center;
+        font-size: 30px;
+        position: relative;
+        top: -70px;
+        line-break: anywhere;
+        background: #fff;
+        width: -webkit-fit-content;
+        width: -moz-fit-content;
+        width: fit-content;
+        float: right;
+        padding: 10px 15px;
+        font-size: 28px;
+}
+.collection-banner {
+
+    padding: 20px;
+}
+ .category-container {
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #fff;
+    padding: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 0;
+      .item {
+        width: 16.6%;
+        padding: 0 18px;
+        text-align: center;
+        .category-content {
+            transition: all .3s;
+            position: relative;
+            bottom: 0;
+            border-radius: 50%;
+            span {
+                margin: 0;
+                padding: 10px 0;
+                display: inline-block;
+                text-align: center;
+                width: 100%;
+                max-width: 85px;
+                color: #4a4a4a;
+                text-transform: uppercase;
+                font-size: 17px;
+                line-height: 13px;
+                letter-spacing: 0.6px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+            .category-img {
+                display: block;
+                position: relative;
+                width: 100%;
+                img {
+                    width: 100%;
+                    border-radius: 50%;
+                    overflow: hidden;
+                    transition: .3s;
+                    border: 1px solid transparent;
+                    transition: all .3s;
+                    max-width: 100%;
+                    display: block;
+                }
+            }}
+    }
+}
+.second-cat .bg-img {
+   
+    object-fit: cover;
+    height: 282px;
+}
+@media only screen and (max-width: 768px) {
+    .second-cat .bg-img {
+   
+         height: 135px;
+    }
+  
+    .home-slider{
+    h1 {
+        font-size: 13px;
+        font-weight: 500;
+      
+    }
+    .btn-solid  {
+        padding: 3px 6px;
+        font-size: 11px;
+    }
+    h4 {
+        font-size: 13px;
+        display: none;
+    }
+   
+    .slider-container  {
+        
+        left: 8%;
+    }
+    .home {
+        
+        height: auto;
+        max-height: 55vh;
+    }
+}
+.slide-cats {
+    .category-container {
+        padding: 10px;
+        .item  {
+       
+            padding: 0;
+           
+        }
+    }
+    h2 {
+    font-size: 14px;
+}
+}
+.collection-banner  {
+    padding: 0;
+}
+
+element.style {
+}
+.category-container  .item  .category-content  span  {
+  
+    text-transform: capitalize;
+    font-size: 12px;
+   
+    overflow: auto;
+    text-overflow: unset;
+    max-width: unset;
+  }
+  .second-cat h2 {
+         
+    top: -38px;
+  
+    padding: 6px 10px;
+    font-size: 14px;
+}
+}

@@ -1,0 +1,17 @@
+@media only screen and (max-width: 992px) {
+  .footer-theme .sub-title li {
+    font-size: 12px;
+  }
+  .footer-logo {
+    display: inline-flex;
+    img {
+      width: 100px;
+      object-fit: contain;
+      margin-right: 15px;
+    }
+    p {
+      font-size: 12px;
+      line-height: 2em;
+    }
+  }
+}

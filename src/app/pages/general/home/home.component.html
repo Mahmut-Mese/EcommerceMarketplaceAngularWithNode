@@ -1,0 +1,127 @@
+<section class="p-0  ">
+  <swiper class="slide-1 home-slider" [config]="configMain">
+    <div *ngFor="let slide of slideMain">
+      <div class="home text-center">
+        <img [src]="slide.src" alt="" class="bg-img blur-up lazyload" />
+        <div class="slider-container">
+          <div>
+            <h4>{{slide.textHead}}</h4>
+            <h1>{{slide.text}}</h1>
+            <a routerLink="{{slide.href}}" class="btn btn-solid">{{slide.textButton}}</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </swiper>
+</section>
+<section class="slide-cats">
+  <div class="title1 section-t-space">
+ 
+    <h2 class="title-inner1">En Trend toptan ürünler</h2>
+  </div>
+  
+  <swiper class="category-container"  [config]="configCats">
+     <div class="item" *ngFor="let slide of slideCats">
+    <a routerLink="categori" class="category-content">
+    <div class="category-img">
+    <img [src]="slide.src" alt="">
+    </div>
+    <span>{{slide.text}}</span>
+    </a>
+    </div>
+ 
+    </swiper>
+</section>
+
+<!-- <section class="pb-0 ratio2_1 first-cat">
+  <div class="container">
+      <div class="row partition2">
+          <div *ngFor="let cat of firstCategories" class="col-md-6">
+              <a routerLink="cat.href">
+                  <div class="collection-banner p-right text-center">
+                      <div class="img-part">
+                          <img [src]="cat.src" class="img-fluid blur-up lazyload bg-img"
+                              alt="">
+                      </div>
+                      <div class="contain-banner">
+                          <div>
+                               <h2>{{cat.title}}</h2>
+                          </div>
+                      </div>
+                  </div>
+              </a>
+          </div>
+         
+      </div>
+  </div>
+</section> -->
+<section class="pb-0 ratio2_1 second-cat">
+  <div class="container">
+      <div class="row partition2">
+          <div *ngFor="let cat of secondCategories" class="col-md-4 col-6">
+              <a routerLink="{{cat.href}}">
+                  <div class="collection-banner p-right text-center">
+                      <div class="img-part">
+                          <img [src]="cat.src" class="img-fluid blur-up lazyload bg-img"
+                              alt="">
+                      </div>
+                      <div class="">
+                          <div>
+                               <h2>{{cat.title}}</h2>
+                          </div>
+                      </div>
+                  </div>
+              </a>
+          </div>
+         
+      </div>
+  </div>
+</section>
+ 
+<section class="section-b-space p-t-0 ratio_asos d-none d-sm-block">
+  <div class="title1 section-t-space " >
+    <h4>fırsat ürünleri</h4>
+    <h2 class="title-inner1">En çok satanlar</h2>
+  </div>
+  <div class="container">
+    <div class="row">
+        <div class="col-lg-6 offset-lg-3">
+            <div class="product-para">
+                <p class="text-center">En çok satan ürünler simply dummy text of the printing and typesetting industry.
+                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+            </div>
+        </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <swiper class="product-4 product-m no-arrow" [config]="configProducts">
+          <div class="product-box" *ngFor="let slide of slideProducts">
+            <div>
+              <div class=" ">
+                <a href="product-page(no-sidebar).html"
+                  ><img
+                    [src]="slide.src"
+                    class="img-fluid blur-up lazyload bg-img"
+                    alt=""
+                /></a>
+              </div>
+            </div>
+            <div class="product-detail">
+              <br />
+              <a href="#">
+                <h5 class="store-name">{{ slide.store }}</h5>
+                <h6>{{ slide.name }}</h6>
+              </a>
+              <h4>
+                {{ slide.newPrice }} <del>{{ slide.oldPrice }}</del>
+              </h4>
+              <br />
+            </div>
+          </div>
+        </swiper>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,43 @@
+@media (max-width: 768px){
+    .product-page-filter,.search-count{width: 50% !important;}
+    [type="search"] {
+       
+        border: 1px solid #eee;
+        width: 100%;
+        height: 40px;
+        padding: 10px;
+    }
+    .collection-product-wrapper .product-top-filter .product-filter-content .search-count {
+        padding: 0;
+    }
+    .vendor-cover img{width: 100%;}
+}
+@media (max-width: 577px){
+    .collection-product-wrapper .product-top-filter .product-filter-content .search-count {
+        padding: 0;
+    }
+.vendor-profile {
+    margin-top: 0;
+}}
+@media (min-width: 768px){
+    .product-page-filter select {
+        border: 1px solid #dddddd;}
+    [type="search"] {
+        outline-offset: -2px;
+        -webkit-appearance: none;
+        width: 100%;
+        height: 100%;
+        padding: 15px;
+        border: 0;
+    }
+    input:focus {
+        outline: none;
+    }
+.collection-product-wrapper .product-top-filter .product-filter-content .search-count {
+    border-left: 1px solid #dddddd !important;
+    padding: 0;
+}
+}
+.vendor-cover img{
+    max-width: 100%;
+}

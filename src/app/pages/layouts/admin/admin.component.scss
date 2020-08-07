@@ -1,0 +1,23 @@
+@import "../../../../assets/css/themify.css";
+@import "../../../../assets/css/jsgrid.css";
+@import "../../../../assets/css/admin.css";
+.page-wrapper .page-body-wrapper .page-body {
+    margin-left: 255px;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    margin-top: 0;
+}
+@media only screen and (max-width: 768px){
+.page-wrapper .page-body-wrapper .page-body {
+ margin-left: 0;
+}
+ 
+}
+@media only screen and (min-width: 768px){
+    .page-wrapper .page-body-wrapper .page-sidebar.open {
+        margin-left: 0;
+    }
+    .page-wrapper .page-main-header.open {
+        margin-left: 255px;
+    }
+    }

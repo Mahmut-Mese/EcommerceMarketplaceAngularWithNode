@@ -1,0 +1,21 @@
+.each-slide {
+
+    height: 163px !important;
+    overflow-y: hidden  !important;
+   
+  }
+  @media only screen and (max-width: 768px) {
+    .each-slide {
+      height: 90px !important;
+   
+      img{
+          width: 64px;
+          object-fit: cover;
+          height: 70px;
+      
+      }
+    }
+   }
+   .product-right .product-buttons .btn-solid {
+    color: #fff;
+}

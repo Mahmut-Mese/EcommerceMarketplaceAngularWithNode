@@ -1,0 +1,23 @@
+img.img-fluid.image_zoom_1.blur-up.lazyloaded {
+    width: 60px;
+}form.needs-validation {
+    clear: both;
+}
+.add-product {
+    float: right;
+    clear: both;
+}
+.one-slider {
+    border: 3px solid #dad5d5;
+    padding: 25px;
+    margin: 20px;
+}
+
+@media only screen and (max-width: 768px)
+{
+    .nav-tabs .nav-item {
+        margin-bottom: -1px;
+        width: 50%;
+        display: inline-block;
+    }
+}
